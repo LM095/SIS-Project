@@ -1,0 +1,46 @@
+.model FSM
+.inputs RES_GEN OL_FSM OFF_FSM
+.outputs INT_GEN_FSM PRIMO_CICLO
+.latch    INT_GEN_FSM LatchOut_v3   0
+.latch    [3234] LatchOut_v4   1
+.start_kiss
+.i 3
+.o 2
+.p 8
+.s 3
+.r s0
+0-- s0 s0 00
+10- s0 lavoro 11
+11- s0 ol 11
+-0- lavoro lavoro 10
+-1- lavoro ol 10
+-0- ol lavoro 10
+-10 ol ol 10
+-11 ol s0 00
+.end_kiss
+.latch_order LatchOut_v3 LatchOut_v4
+.code s0 01
+.code lavoro 10
+.code ol 11
+.names RES_GEN OL_FSM LatchOut_v3 [3234]
+-1- 1
+0-0 1
+.names OFF_FSM LatchOut_v3 LatchOut_v4 [3234] PRIMO_CICLO INT_GEN_FSM
+--0-- 1
+---0- 1
+----1 1
+01--- 1
+.names RES_GEN LatchOut_v3 PRIMO_CICLO
+10 1
+.exdc 
+.inputs LatchOut_v3 LatchOut_v4
+.outputs [3234] INT_GEN_FSM PRIMO_CICLO
+.names LatchOut_v3 LatchOut_v4 dc[3250]
+00 1
+.names dc[3250] [3234]
+1 1
+.names dc[3250] INT_GEN_FSM
+1 1
+.names dc[3250] PRIMO_CICLO
+1 1
+.end

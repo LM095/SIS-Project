@@ -1,0 +1,15 @@
+.model SOMMATORE3BIT
+
+.inputs A2 A1 A0 B2 B1 B0
+.outputs O2 O1 O0 COUT
+
+.subckt zero O=CIN
+.subckt SOMMATORE1BIT A=A0 B=B0 CIN=CIN O=O0 COUT=C0
+.subckt SOMMATORE1BIT A=A1 B=B1 CIN=C0 O=O1 COUT=C1
+.subckt SOMMATORE1BIT A=A2 B=B2 CIN=C1 O=O2 COUT=COUT
+
+.search sommatore1bit.blif
+.search zero.blif
+.search uno.blif
+
+.end

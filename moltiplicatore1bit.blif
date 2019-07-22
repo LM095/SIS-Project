@@ -1,0 +1,8 @@
+.model MOLTIPLICATORE1BIT
+.inputs A B 
+.outputs O 
+.names A B O
+
+11 1
+
+.end

@@ -1,0 +1,26 @@
+# restituisce 0 se A minore o uguale di B
+# restituisce 1 se A maggiore o uguale di B
+# esempio:
+#   sim 0 0 1 0 0 0
+#   Outputs: 1
+#
+#   sim 0 0 0 0 0 1
+#   Outputs: 0
+
+.model MAGGIORE3BIT
+
+.inputs A2 A1 A0 B2 B1 B0
+.outputs AMaggB
+
+
+.subckt XOR A=A2 B=B2 X=X2
+.subckt XOR A=A1 B=B1 X=X1
+.subckt XOR A=A0 B=B0 X=X0
+
+.names A2 A1 A0 X2 X1 X0 AMaggB
+
+1--1-- 1
+-1-01- 1
+--1001 1
+
+.search xor.blif

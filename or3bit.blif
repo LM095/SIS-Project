@@ -1,0 +1,8 @@
+.model OR3BIT
+.inputs A B C
+.outputs O
+
+.names A B C O
+000 0 
+
+.end

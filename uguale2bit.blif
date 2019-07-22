@@ -1,0 +1,12 @@
+.model UGUALE2BIT
+.inputs A1 A0 B1 B0
+.outputs AUgB
+
+.names A1 A0 B1 B0 AUgB
+0000 1
+0101 1
+1010 1
+1111 1
+
+.end
+#

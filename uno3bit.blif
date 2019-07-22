@@ -1,0 +1,10 @@
+.model UNO3BIT
+.outputs O2 O1 O0
+
+.subckt  zero O=O2
+.subckt  zero O=O1
+.subckt  uno O=O0
+
+.search zero.blif
+.search uno.blif
+.end

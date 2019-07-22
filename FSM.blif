@@ -1,0 +1,25 @@
+.model FSM
+
+.inputs RES_GEN OL_FSM OFF_FSM
+.outputs INT_GEN_FSM PRIMO_CICLO
+
+.start_kiss
+.i 3    #3 inputs
+.o 2    #2 outputs
+.s 3    #3 stati
+.p 8    #8 transizioni
+
+# inputs    statoCorrente   statoProssimo   outputs
+
+0--         s0              s0              00
+10-         s0              lavoro          11
+-0-         lavoro          lavoro          10
+-1-         lavoro          ol              10
+-0-         ol              lavoro          10
+-10         ol              ol              10
+-11         ol              s0              00
+11-         s0              ol              11
+
+.end_kiss
+
+.end

@@ -1,0 +1,359 @@
+.model DATAPATH
+.inputs RES_WM RES_DW L0 L1 L2 L3 L4 L5 L6 L7 L8 L9 INT_GEN_FSM PRIMO_CICLO
+.outputs INT_GEN INT_WM INT_DW TH1 TH2 OFF_FSM OL_FSM
+.latch    OL [4276] re NIL 0
+.latch    OFF [4275] re NIL 0
+.latch    INT_DW STATO_PREC_DW re NIL 0
+.latch    INT_WM STATO_PREC_WM re NIL 0
+.latch    OMUX2 REG2 re NIL 0
+.latch    OMUX1 REG1 re NIL 0
+.latch    OMUX0 REG0 re NIL 0
+.names INT_GEN_FSM OFF INT_GEN
+10 1
+.names RES_WM INT_GEN_FSM OMUX2 OMUX1 OMUX0 [4228] INT_WM
+11---- 1
+-10--1 1
+-1-001 1
+.names RES_DW INT_GEN_FSM OMUX2 [4242] INT_DW
+11-- 1
+-101 1
+.names INT_GEN [3982] TH1
+11 1
+.names INT_GEN [4231] TH2
+11 1
+.names [3982] [4231] OL
+11 1
+.names OMUX2 OMUX1 OFF
+11 1
+.names OMUX0 REG2 REG1 REG0 [4257] OMUX2
+11--- 1
+-10-1 1
+-0111 1
+.names OMUX0 REG1 REG0 [4257] OMUX1
+11-- 1
+-011 1
+.names REG0 [4257] OMUX0
+01 1
+.names PRIMO_CICLO STATO_PREC_WM [4228]
+1- 1
+-1 1
+.names PRIMO_CICLO STATO_PREC_DW [4242]
+1- 1
+-1 1
+.names TOT9 TOT8 TOT6 TOT5 TOT4 [4247] [3982]
+1----- 1
+-----1 1
+-11--- 1
+-1-11- 1
+.names MAGG450 TH2XOR [4231]
+1- 1
+-1 1
+.names RES_DW L4 [4242] L4_DW
+11- 1
+-11 1
+.names RES_WM L5 [4228] L5_WM
+11- 1
+-11 1
+.names L2 L3 [4052]
+01 1
+10 1
+.names L3 [4052] SUM_26
+1- 1
+-1 1
+.names L0 SUM_26 [4130]
+01 1
+10 1
+.names [4052] [4132] [4133] [4232]
+00- 1
+-10 1
+.names [4130] [4232] SUM_66
+11 1
+00 1
+.names [4149] [4233] [4147]
+11 1
+.names L6 L7 [4150] [4151] [4149]
+--11 1
+110- 1
+.names L4_DW L5_WM [4233]
+01 1
+10 1
+.names [4147] [4149] [4233] SUM_77
+01- 1
+-01 1
+.names L5_WM [4245] [4152]
+11 1
+00 1
+.names [4154] [4155] [4246] [4153]
+11- 1
+0-0 1
+.names [4152] [4153] SUM_75
+01 1
+10 1
+.names L5_WM [4246] [4154]
+11 1
+00 1
+.names L4_DW [4245] [4246] [4155]
+10- 1
+1-0 1
+.names [4154] [4155] SUM_74
+01 1
+10 1
+.names SUM_88 [4127] [4166] [4165]
+0-1 1
+-10 1
+.names [4165] SUM_89
+1 1
+.names [4223] [4237] [4166]
+11 1
+00 1
+.names SUM_77 [4168] [4169] [4234]
+00- 1
+-10 1
+.names [4166] [4234] SUM_88
+11 1
+00 1
+.names SUM_66 [4225] [4170]
+01 1
+10 1
+.names SUM_75 [4172] [4173] [4235]
+00- 1
+-10 1
+.names [4170] [4235] SUM_86
+11 1
+00 1
+.names [4135] [4240] [4174]
+11 1
+00 1
+.names [4156] [4176] [4177] [4236]
+00- 1
+-10 1
+.names [4174] [4236] SUM_84
+11 1
+00 1
+.names SUM_88 [4187] [4248]
+0- 1
+-0 1
+.names INT_GEN_FSM SUM_89 [4248] TOT9
+11- 1
+1-0 1
+.names SUM_86 [4191] [4229] [4187]
+111 1
+.names SUM_88 [4187] TOT8
+1- 1
+-1 1
+.names INT_GEN_FSM SUM_86 [4191] TOT6
+101 1
+110 1
+.names [4192] [4222] [4226] [4191]
+10- 1
+0-1 1
+.names [4168] [4169] [4229]
+01 1
+10 1
+.names INT_GEN_FSM TOT6 [4187] [4191] [4229] TOT7
+1-0-1 1
+1001- 1
+.names L9 [4226] [4192]
+01 1
+10 1
+.names SUM_84 [4194] [4195] [4222]
+00- 1
+-10 1
+.names INT_GEN_FSM [4192] [4222] TOT5
+111 1
+100 1
+.names L8 SUM_84 [4194]
+01 1
+10 1
+.names [4196] [4227] [4243] [4195]
+01- 1
+1-0 1
+.names [4194] [4195] TOT4
+01 1
+10 1
+.names L9 [4227] [4196]
+01 1
+10 1
+.names L8 [4178] [4243]
+0- 1
+-0 1
+.names [4196] [4243] TOT3
+11 1
+00 1
+.names L8 [4178] [4221]
+01 1
+10 1
+.names TOT8 TOT7 [4247]
+11 1
+.names TOT9 TOT6 TOT5 TOT4 [4221] [4247] MAGG450
+1----- 1
+-11--1 1
+-1-1-1 1
+-1--11 1
+.names TOT8 [4249]
+1 1
+.names TOT7 TOT6 TOT5 TOT4 TOT3 [4255]
+0---- 1
+-000- 1
+-00-0 1
+.names [3982] [4249] [4255] TH2XOR
+01- 1
+0-0 1
+.names [4275] OL [4257]
+01 1
+.names L0 [4251] [4128]
+11 1
+00 1
+.names SUM_26 SUM_66 [4130] [4129]
+-01 1
+1-0 1
+.names L2 L3 [4251]
+0- 1
+-0 1
+.names [4128] [4129] [4251] [4127]
+11- 1
+0-0 1
+.names L0 L1 [4258]
+0- 1
+-0 1
+.names [4052] [4258] [4132]
+11 1
+00 1
+.names [4136] [4244] [4252] [4253] [4135]
+00-- 1
+0-0- 1
+1--0 1
+.names [4135] [4133]
+1 1
+.names L0 L1 [4244]
+1- 1
+-0 1
+.names L2 [4244] [4134]
+11 1
+00 1
+.names [4134] [4252] [4136]
+11 1
+00 1
+.names L0 L1 [4252]
+0- 1
+-1 1
+.names L1 L3 [4253]
+0- 1
+-0 1
+.names L6 L7 L4_DW [4155] [4150]
+---1 1
+-01- 1
+110- 1
+.names [4152] [4153] [4245] [4151]
+11- 1
+0-0 1
+.names L6 L7 [4245]
+1- 1
+-0 1
+.names L6 L7 [4246]
+0- 1
+-1 1
+.names L6 L7 L4_DW [4150] [4155] [4156]
+1--0- 1
+-1-0- 1
+--1-0 1
+.names L4_DW L5_WM [4223]
+0- 1
+-0 1
+.names [4127] [4147] [4237]
+01 1
+10 1
+.names SUM_77 [4128] [4238]
+11 1
+00 1
+.names [4129] [4238] [4168]
+11 1
+00 1
+.names [4150] [4151] [4225]
+01 1
+10 1
+.names SUM_86 [4170] [4225] [4169]
+01- 1
+-01 1
+.names SUM_75 [4132] [4239]
+11 1
+00 1
+.names [4133] [4239] [4172]
+11 1
+00 1
+.names SUM_74 SUM_84 [4174] [4173]
+-01 1
+1-0 1
+.names SUM_74 [4134] [4240]
+11 1
+00 1
+.names [4136] [4156] [4224]
+01 1
+10 1
+.names [4224] [4253] [4176]
+11 1
+00 1
+.names L1 L3 [4241]
+01 1
+10 1
+.names L5_WM [4241] [4177]
+11 1
+.names L5_WM [4177] [4241] [4178]
+10- 1
+-01 1
+.names [4172] [4173] [4226]
+01 1
+10 1
+.names [4176] [4177] [4227]
+01 1
+10 1
+.names [4260]
+.names [4276] OL_FSM
+1 1
+.names [4275] OFF_FSM
+1 1
+.exdc 
+.inputs [4275] REG0 REG1 REG2 [4276]
+.outputs OL OFF OMUX2 OMUX1 OMUX0 INT_GEN INT_WM INT_DW TH1 TH2 OFF_FSM OL_FSM
+.names REG1 REG2 [4276] dc[4303]
+11- 1
+1-0 1
+010 1
+.names REG0 REG1 REG2 [4276] dc[4303] dc[4305]
+0---1 1
+111-- 1
+11-0- 1
+10-0- 1
+.names REG0 REG1 REG2 [4276] dc[4308]
+1--- 1
+-0-- 1
+--0- 1
+---0 1
+.names [4275] dc[4305] dc[4308] dc[4311]
+01- 1
+1-1 1
+.names dc[4311] OL
+1 1
+.names dc[4311] OFF
+1 1
+.names dc[4311] OMUX2
+1 1
+.names dc[4311] OMUX1
+1 1
+.names dc[4311] OMUX0
+1 1
+.names dc[4311] INT_GEN
+1 1
+.names dc[4311] INT_WM
+1 1
+.names dc[4311] INT_DW
+1 1
+.names dc[4311] TH1
+1 1
+.names dc[4311] TH2
+1 1
+.names dc[4311] OFF_FSM
+1 1
+.names dc[4311] OL_FSM
+1 1
+.end

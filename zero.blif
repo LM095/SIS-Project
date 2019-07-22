@@ -1,0 +1,7 @@
+#un bit a 0
+
+.model zero
+.outputs O
+.names O
+
+.end
